@@ -280,6 +280,7 @@ for a in range(0, app_count):
     print('发送邮件 ( 邮箱单独运行，每次运行只发送一次，防止封号 )')
     if other_config['email'][0] != '':
         #sendEmail(a,'weather',weather)
+	print("发送邮件邮箱")
     else:
         print("尚未配置邮箱")
 print('')
