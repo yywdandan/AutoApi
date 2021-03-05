@@ -274,16 +274,6 @@ else:
 headers={'Accept-Language': 'zh-CN'}
 weather=req.get(r'http://wttr.in/'+city+r'?format=4&?m',headers=headers).text
 
-#实际运行
-for a in range(0, app_count):
-    print('账号 '+str(a+1))
-    print('发送邮件 ( 邮箱单独运行，每次运行只发送一次，防止封号 )')
-    if other_config['email'][0] != '':
-        #sendEmail(a,'weather',weather)
-	print("发送邮件邮箱")
-    else:
-        print("尚未配置邮箱")
-print('')
 #其他api
 for _ in range(1,config['rounds']+1):
     timeDelay('rounds_delay')  
